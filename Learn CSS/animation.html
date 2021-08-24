@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .box{
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        background: skyblue;
+        border-radius: 50%;
+        /* transition: 0.5s; */
+        /* animation-name: first;
+        animation-duration: 2s; */
+        /* animation-delay: 4s; */
+        /* animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear; */
+        animation: first 2s linear 1s infinite alternate;
+    }
+
+    /* .box:hover{
+        transform: translateX(20px);
+    } */
+
+    @keyframes first{
+        from{
+            transform : translate(0);
+        }
+
+        to {
+            transform: translateX(100px);
+        }
+    }
+</style>
+
+<body>
+    
+    <!-- animation တစ်ခုကိုတည်ဆောက်တော့မယ်ဆိုရင် firstly u have to built name of animation 
+        1.@keyframes name{
+            from{}
+            to{}
+        }
+        အရင်လုပ်ပေးရပါတယ်
+        ပြီးမှ properties တေသုံးပေါ့ဗျာ
+        မင်းလုပ်ထားတယ့် animation name ကို မင်းလုပ်ချင်တယ့် 
+        animation-duration ကတော့ မင်း ဘယ်လောက်ကြာချင်တာလဲကို ဆိုလိုတာကိုပြောတာပါ
+        animation-delay ကတော့မင်း ဘယ်လောက် secပြီးမှ မင်းanimation ကို အလုပ်လုပ်ပေါ့
+        animation-iteration-count ကတော့မင်းဘယ်နခါ လုပ်ပေါ့ကွာ
+        animation-direction: alternate က from က နေ to ပြီးရင် to ကနေ from
+        animation-timing-function:linear က မင်းသတ်မှတ်ထားတယ့် အကွာအဝေးကို timingနဲ့စားတာ ရတယ့်တန်ဖိုးက ကိန်းသေဘဲဖြစ်ပါတယ်
+        animation propertyတစ်ခုထဲနဲ့ အပေါ်က valueတေအကုန်ရေးလို့ရပါတယ် but အစဥ◌်လိုက်တော့ဖြစ်ဖို့တော့လိုတယ်
+        animation: 1.name 2.duration 3.function 4.delay 5.count 6.direction
+    -->
+
+    <div class="box"></div>
+
+</body>
+</html>

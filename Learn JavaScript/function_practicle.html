@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical for function</title>
+</head>
+<body>
+    
+
+    <script>
+
+            // Function Practical
+
+            // . area တွက်တယ့် function တစ်ခုကို တည်ဆောက်ပါမယ်။ width and breadth ယူပါမယ် area ကို တွက်ချက်ပါမယ်။ အဖြေကို square feet နဲ့ ထုတ်ပေးပါမယ်။
+            
+            // . တွက်ချက်မှု w,b,result တွေကို မှတ်တမ်းအဖြစ်သိမ်းဆည်းထားပါမယ်
+
+            let record = [];
+            
+            let index = 0;
+
+            function save_record(w,b,r){
+                record[index] = {
+                    width : w,
+                    breadth : b,
+                    result : r,
+                };
+                index++;
+            }
+
+            function cal_area(width,breadth){
+                let cal = width * breadth;
+                let result = cal+ "Sqft";
+                save_record(width,breadth,result);
+                return result;
+            }
+
+            // .USD,EUR,SGD တွေကို မြန်မာငွေပြောင်းတယ့် function တစ်ခုကို တည်ဆောက်မယ်။ rate တေကို /js/exchange_rate.js ထဲကနေရပါမယ်
+            
+            // .မြန်မာငွေကို USD,EUR,SGD ပြောင်းတဲ့ function တစ်ခု တည်ဆောက်ကြမယ်
+
+
+            let rates = {
+                usd : 1636,
+                eur : 1933,
+                sgd : 1208,
+            }
+
+            function exchange_to_mmk(amount,currency){
+                let cal = amount * rates[currency];
+                let result = cal + "mmk";
+                return(result);
+            }
+
+            function exchange_from_mmk(amount,currency){
+                let cal = amount / rates[currency];
+                let result = cal + currency;
+                return(result);
+            }
+
+            // သစ်သီးဝယ်ကြမယ်၊ကျသင့်ငွေရယ်၊အခွန် ၅%ရယ်၊ စုစုပေါင်းရယ်ထုတ်ပေးပါ
+            
+            // သစ်သီးprice
+
+            let fruits = {
+                orange : 100,
+                apple : 250,
+                mango : 70,
+            }
+
+            function cal_tax(amount,percentage = 5){
+                let cal = [amount * percentage]/100 ;
+                return cal;
+            }
+
+            function cal_cost(quantity,goods){
+                let cal = quantity * fruits[goods];
+                let result = cal + "mmk";
+                return {
+                    quantity,
+                    goods,
+                    Individual_cost : fruits[goods],
+                    cost : result ,
+                    tax : cal_tax(cal)+"mmk",
+                    total_cost : cal + cal_tax(cal)+"mmk",
+                };
+            }
+
+    </script>
+
+
+
+
+
+</body>
+</html>

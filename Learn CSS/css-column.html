@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-column Course</title>
+</head>
+<style>
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    body{
+        padding: 30px;
+    }
+
+    h1{
+        color: rgb(64, 190, 240);
+        margin-bottom: 30px;
+    }
+
+    .paragraph{
+        color: #888888;
+        column-count: 3;
+        column-width: 300px;
+        column-rule: 1px solid #888888;
+        column-gap: 50px;
+    }
+
+    .paragraph p{
+        margin-bottom: 30px;
+        /* text-align: justify; */
+        line-height: 40px;
+    }
+
+    .fullcol{
+        column-span: all;
+        margin-top: 10px;
+    }
+
+    @media screen and (max-width : 480px) {
+        
+        h1{
+            margin-bottom: 10px;
+        }
+
+        .fullcol{
+            margin-top: 0;
+        }
+    }
+</style>
+<body>
+    <h1>CSS3 Column Property</h1>
+
+    <div class="paragraph">
+        <p class="fullcol">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        <p class="fullcol">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit voluptates quas ab ipsa nesciunt harum consectetur molestiae nam accusantium nostrum rem magni corporis eos, dignissimos doloremque placeat enim impedit perspiciatis.</p>
+        
+
+    </div>
+</body>
+</html>

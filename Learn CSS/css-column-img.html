@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-Column-Img</title>
+</head>
+
+<style>
+    
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .title{
+        color: skyblue;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    .box{
+        columns: 3 300px;
+        /* column-rule: 1px solid black; */
+        column-gap: 20px;
+        width: 1000px;
+        margin: auto;
+
+    }
+
+    .box img{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .box img:hover{
+        filter: contrast(150%);
+    }
+
+    @media screen and (max-width: 1024px) {
+        .box{
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width : 480px) {
+        .box{
+            columns: 2 150px;
+            column-gap: 10px;
+            width: 90%;
+        }
+
+        .title{
+            margin-bottom: 0;
+        }
+
+        .box img{
+            margin-bottom: 10px;
+
+        }
+    }
+    
+    
+</style>
+
+<body>
+
+    <!--
+         column က အပိုင်းပိုင်းတယ်လို ပြောရမယ်
+         column-count က colဘယ်နခုပိုင်း မလဲကိုပြောတာပါ
+         column-width က responsive အတွက် သုံးတာပါ
+         columns: count width နှစ်ခုလုံးကို တစ်ပြိုင်ထဲနဲ့ပေးလို့ရပါတယ်
+         column-rule က ကြားထဲကနေ မျဥ◌်းသားတယ်လို့ မှတ်လို့ရပါတယ်
+         column-gap က တော့ သူ  ruleလုပ်ထားတာကို padding လုပ်တလို ထားတာပါဘဲ
+         column-span:all;ကတော့ column-count : 2;ပေးထားတယ်ဆိုရင် အဲ့၂ခုကိုင်းတစ်ခုထဲဖြစ်အောင်ပေါင်းလိုက်တယ့်သဘောဘဲဖြစ်ပါတယ်
+         
+    -->
+
+    
+    <div class="title">
+        Gallery
+    </div>
+
+    <div class="box">
+        <img src="img/d.jpg" alt="">
+        <img src="img/iron-man-download-hd-for-pc-wallpaper-preview.jpg" alt="">
+        <img src="img/ironman.jpg" alt="">
+        <img src="img/IU-770x433.jpg" alt="">
+        <!-- <img src="img/iu.jpg" alt="" style="height: 500px;"> -->
+        <img src="img/lll.jpg" alt="">
+        <img src="img/maxresdefault.jpg" alt="">
+        <img src="img/ssddd.gif" alt="">
+        <img src="img/sss.jfif" alt="">
+
+    </div>
+</body>
+</html>

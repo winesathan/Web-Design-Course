@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping</title>
+</head>
+<body>
+    
+    <script>
+
+            // Looping 
+
+            // for( let i =1 ; i <= 6 ; i++ ){
+
+            //     console.log("Hello I am loop" + i);
+
+            // }
+
+            //  ၁. ၁ကနေ၅ထိ အကုန်ပေါင်းမယ်
+
+            // let result = 0;
+
+            // for( let i = 1 ; i <= 5 ; i++ ){
+
+            //     result += i;
+            //     console.log(i);
+
+            // }
+            
+            // console.log("The answer => "+ result);
+
+            // 1 က နေ 30 ထိ ကို မှ မဂဏန်းတေထုတ်မယ်
+
+            // let result = 0;
+
+            // for( let i =1 ; i <= 30 ; i += 2 ){
+
+            //     console.log("This is no => "+ i);
+
+            // }
+
+
+            // Looping for(x of array) and for(x in array)
+
+            // x of array က array onlyဘဲရပါတယ်ဗျာ ပြီးတော့ array အခန်းကို ကိုယ်စားပြုပါတယ်
+
+            // x in array က array ရော obj ရော အလုပ်အလုပ်ပါတယ် array ထဲ က index no ကို ကိုယ်စားပြုပါတယ်
+            
+            let fruits = ["mango","apple","orange","stawberry","lemon"];
+
+            let marks = [21,25,114,658,45];
+
+            let infos = {
+                name : "Mg Wyne Sat Han",
+                age : 21,
+                gender : "Male",
+                Relationship : "RS",
+                skills :["HTML","CSS","Javascript","ComputerBasic","A+"]
+            }
+
+            for( let i=0; i < fruits.length ; i++){
+
+                console.log("I like "+ fruits[i]);
+
+            }
+
+            let total = 0;
+
+            for(let i=0 ; i < marks.length ; i++){
+                total += marks[i];
+                console.log(marks[i]);
+            }
+            console.log("This is the total answer => "+total);
+
+            for( x of fruits){
+                console.log(x);
+            }
+
+            for(x in fruits){
+                console.log(x,"-",fruits[x]);
+            }
+
+            for(x in infos){
+                console.log(x,"-",infos[x]);
+            }
+
+    </script>
+
+
+
+
+
+</body>
+</html>

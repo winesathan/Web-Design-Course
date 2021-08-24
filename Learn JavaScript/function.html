@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+    <script>
+            console.log(b);
+            let currentage = 21;
+            // let birthyear = 2021 - currentage;
+
+            // let result = `မင်းကို ${birthyear} တွင် မွေးခဲ့သည်`;
+
+            // Simple Function 
+
+            // function getbirthyear (){
+            //     // let currentage = 21;
+            //     let birthyear = 2021 - currentage;
+            //      let result = `မင်းကို ${birthyear} တွင် မွေးခဲ့သည်`;
+            //     return(result);
+            // }
+
+            // parameter function 
+            
+            // function getbirthyear (currentage){
+            //     // let currentage = 21;
+            //     let birthyear = 2021 - currentage;
+            //      let result = `မင်းကို ${birthyear} တွင် မွေးခဲ့သည်`;
+            //     return(result);
+            // }
+
+            // parameter တေကို default ထားလို့ရပါတယ်, overwrite လဲရေးလို့ရပါတယ်
+
+            function getbirthyear (name="Wine Sat Han",currentage=21){
+                // let currentage = 21;
+                let birthyear = 2021 - currentage;
+                 let result = `${name}ကို ${birthyear} တွင် မွေးခဲ့သည်`;
+                return(result);
+            }
+
+            // There are many designs of function type
+            // No 1 function statement
+            // No 2 function expression
+            // No 3 function IIFE
+            // NO 4 Scope (1)BLock Scope Variable, (2)Local scope variable, (3)Globle scope variable
+            // No 5 Hoisting
+
+            // This is function statement
+
+            function aa(){
+                console.log("This is function statement");
+            }
+
+            // This is function expression
+
+            let x = function(){
+                console.log("This is function expression");
+            };
+
+            // This is function IIFE
+
+            (function(){
+                console.log("This is function IIFE");
+            })()
+
+            // This is Scope of block
+
+            // {
+            //     let a = "This is a";
+            //     var b = "This is b";
+            // }
+
+            // console.log(a); This variable cant be defined 
+            console.log(b);
+
+            // This is Scope of local
+
+            // function localscope(){
+            //     let a = "This is a";
+            //     var b = "This is b";
+
+            //     console.log(a);
+            //     console.log(b);
+            // }
+
+            // console.log(a); This invoke cant be defined because this is local scope variable.This scope can only display inside of the function 
+
+            // This is Scope of globle
+
+            function localscope(){
+                let a = "This is a";
+                var b = "This is b";
+
+                console.log(a);
+                console.log(b);
+                console.log(currentage);
+            }
+
+            console.log(currentage);
+
+            // This is Hoisting
+
+            // Hoisting can invoke only delcarated function and variable which only includes *var* not let
+
+            let a = "This is a";
+            var b = "This is b";
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+    html{
+        scroll-behavior: smooth;
+    }
+    .box{
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+        background: pink;
+        position: relative;
+    }
+
+    .box:after{
+        content: "";
+        border: 20px solid white;
+        border-top-color: pink;
+        display: inline-block;
+        margin-left: 100px;
+        position: absolute;
+        bottom: -40px;
+    }
+    .boxtail{
+        /* border: 20px solid black;
+        border-top-color: pink;
+        display: inline-block;
+        margin-left: 100px; */
+    }
+
+    .home{
+        height: 80vh;
+        background-image: url("img/IU-770x433.jpg");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: -2;
+        
+    }
+
+    .home::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: #73C8A9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #373B44, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        opacity: 0.5;
+        z-index: -1;
+
+    }
+
+    .home-content{
+        width: 350px;
+        margin-left: 50px;
+        
+    }
+
+    .home-content-title{
+        color: white;
+        font-weight: bold;
+    }
+
+    .up{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: cadetblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+    }
+
+    .up-icon{
+        width: 30px;
+        
+    }
+</style>
+<body>
+    <!-- <div class="box">
+
+    </div>
+
+    <div class="boxtail"> </div>
+    <br><br> -->
+
+    <!-- မင်းသိကိုသိရမယ့် color-site တေရှိတယ် 
+        1.uigradient.com
+        2.mycolor.space
+        3.gradientmagic.com
+        .............................
+        မင်းထက်သိရမယ့် icon-site တေလည်းရှိသေးတယ်
+        1.flaticon.com
+        2.fontawsome.com
+        3.icon8.com
+    -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1 class="home-content-title">
+                This is Title
+            </h1>
+            <p class="home-content-par">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi est numquam doloribus asperiores, ex quam ad illum fuga porro autem ducimus error blanditiis sed quia corporis veniam impedit assumenda nulla.
+            </p>
+        </div>
+    </section>
+
+    <section style="height: 100vh;">
+
+    </section>
+
+    <a class="up" href="#home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="up-icon" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg>
+    </a>
+</body>
+</html>

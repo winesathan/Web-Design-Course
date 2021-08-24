@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method</title>
+</head>
+<body>
+    
+    
+    <script>
+
+            // object ထဲ က method and property များ
+
+            let mytest = function(){
+                console.log(this);
+            }
+
+            let myself = {
+
+                // Properties
+                
+                name : "Mg Wine Sat Han",
+                age : 21,
+                gender : "male",
+                relationship : "rs",
+                skill : ["Html,Css,Js"],
+
+                // Method
+
+                a : function(){
+                    return("This is method");
+                },
+
+                bb(para="gg"){
+                    return("This is method"+ para);
+                },
+
+                showall(){
+                    return(`My name is ${this.name} and I'm ${this.age}`);
+                }
+            }
+
+
+
+    </script>
+
+</body>
+</html>

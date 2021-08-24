@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Exercises</title>
+</head>
+
+<style>
+    .one{
+        width: 500px;
+        height: 200px;
+        background: aqua;
+        /* position: relative;
+        top: 30px;
+        right: 20px; */
+        /* position: absolute;
+        z-index: 3; */
+        /* top: 40px;
+        left: 300px; */
+
+    }
+    
+    .two{
+        width: 550px;
+        height: 200px;
+        background: blueviolet;
+        /* position: absolute;
+        z-index: 2;
+        top: 100px; */
+    }
+
+    .three{
+        width: 600px;
+        height: 200px;
+        background: burlywood;
+        /* position: absolute;
+        z-index: 1;
+        top: 150px ; */
+    }
+
+    .four{
+        width: 650px;
+        height: 200px;
+        background: chartreuse;
+        /* position: absolute;
+        top: 200px; */
+    }
+
+    .p-fix{
+        border: 1px solid black;
+        display: block;
+        padding: 5px;
+        position: fixed;
+        top: 120px;
+        right: 20px;
+        background: skyblue;
+        color: #ffffff;
+    }
+
+    .box{
+        width: 200px;
+        height: 200px;
+        background: cornflowerblue;
+    }
+
+    .item{
+        width: 50px;
+        height: 50px;
+        background: darkkhaki;
+        /* position: absolute;
+        bottom: 100px; */
+        position: relative;
+        top: 30px;
+        left: 100px;
+    }
+</style>
+
+<body>
+
+    <!-- For position -->
+    <!-- static ( Default setting )
+    relative (ခြံခတ်ဖို့)
+    fixed ( ထပ်ဖို့၊ browserမှာကပ်၊ scroll မပါ )
+    absolute ( ထပ်ဖို့၊ document မှာကပ်၊ scroll ပါ၊ )
+    sticky ( ပုံမှန်တိုင်း static၊ သတ်မှတ်ထားတဲ့ နေရာရောက်မှ ကပ် )
+    top, left, bottom, right များသည် position ရှိမှအလုပ်လုပ်သည်။
+    z-index ကို layer ခွဲဖို့အသုံးပြုသည်။ ( z-index များလေ အပေါရောက်လေ ) -->
+
+
+    <div class="one">
+        <h1>This is H tag</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus at impedit quo, assumenda ea expedita ullam fugit quis unde dignissimos adipisci perferendis earum, hic vel quisquam repellat voluptatem repudiandae tenetur!
+        </p>
+    </div>
+
+    <div class="two">
+        <h1>This is H tag</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus at impedit quo, assumenda ea expedita ullam fugit quis unde dignissimos adipisci perferendis earum, hic vel quisquam repellat voluptatem repudiandae tenetur!
+        </p>
+    </div>
+
+    <div class="three">
+        <h1>This is H tag</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus at impedit quo, assumenda ea expedita ullam fugit quis unde dignissimos adipisci perferendis earum, hic vel quisquam repellat voluptatem repudiandae tenetur!
+        </p>
+    </div>
+
+    <div class="four">
+        <h1>This is H tag</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus at impedit quo, assumenda ea expedita ullam fugit quis unde dignissimos adipisci perferendis earum, hic vel quisquam repellat voluptatem repudiandae tenetur!
+        </p>
+    </div>
+
+    <div class="p-fix">
+        Fix
+    </div>
+
+    <div class="box">
+        <div class="item"></div>
+    </div>
+    <div class="five">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quaerat eius sequi exercitationem aperiam, maiores itaque sed est? Ab voluptatem iure voluptates? Eveniet minima voluptatum architecto sed id, doloribus asperiores?</p>
+        <div style="background: darkkhaki;position: sticky;top: 0;">This is sticky</div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab magnam molestiae, aliquam, dignissimos laboriosam adipisci eaque quas vero possimus sapiente, tempore repellendus! Repudiandae, vel aliquam quos repellendus qui vero.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit delectus ipsum repellat nam magni commodi eos sit repellendus placeat quae iure aut aliquam, ea nobis, hic dolore iusto, soluta animi!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis atque est, nam placeat eos enim nihil amet modi exercitationem fugiat impedit ea facilis quidem odio quos? Reiciendis in quo incidunt.</p>
+        
+    </div>
+</body>
+</html>
