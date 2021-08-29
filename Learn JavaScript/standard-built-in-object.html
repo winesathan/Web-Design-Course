@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard built-in object</title>
+</head>
+<body>
+
+    <!-- Standard built-in obj -->
+
+    <script>
+        
+        // date ရှိမယ် number ရှိမယ် ပီးရင် Math ရှိမယ်
+
+        let d = new Date();
+        console.log(d.getDate());
+        // console.log(d.getHours());
+        // console.log(d.getFullYear());
+        // console.log(d.getMinutes());
+
+        // number က number တေကို string နဲ့ ရေးထားတာကိုတောင် number ပြောင်းပေးနိုင်စွမ်းရှိတယ်
+        let a = "123";
+        let n = Number(a);
+        console.log(n);
+
+        // Math ကတော့ random ရှိတယ် floor ရယ် ceil ရယ် ရှိတယ်
+
+        // floorကတော့ လျော့ယူတာ ceil ကတော့ တိုးယူတာပါ
+        
+        console.log(Math.random());
+        console.log(Math.floor(123.45));
+        console.log(Math.ceil(123.567));
+
+
+        // eval က တော့ number တေကို string ပြောင်းလဲပေးနိင်ပါတယ် but number နဲ့ string တေနဲ့ပေါင်းတာကိုတော့ number တော့မပြောင်းလဲပေးပါဘူး
+
+        console.log(eval(1+2));
+        console.log(eval("1+4"));
+        // console.log(eval(1+"abc")); error တတ်တယ်
+
+        // parseInt က "15kg" ဆိုရင်တောင် ၁၅ကို ရအောင်ထုတ်ပေးသေးတယ် but ဒီလို အခြေနေဆိုရင်တော့ မရပါဘူး "15kg+12"
+
+        console.log(parseInt("15kg"));
+        console.log(parseInt("15kg+12"));
+        console.log(parseInt("1.5kg")) 
+        console.log(parseFloat("1.5kg"));
+
+    </script>
+
+    
+</body>
+</html>

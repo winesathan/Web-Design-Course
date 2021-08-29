@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Object</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let d = new Date();
+
+        console.log(d);
+
+        console.log(d.getHours()+ ":" + d.getMinutes());
+
+        // console.log(d.toString());
+
+        console.log(`${d.getDate()} / ${d.getMonth()} / ${d.getFullYear()}`);
+
+        console.log(d.toLocaleString());
+
+        console.log(d.toLocaleTimeString("en-us"));
+
+        // ယခုလက်ရှိအချိန်က နေနောက်နာရီ ၃၀၀ပေါင်းရင် ဘယ် နနာရီရောက်သွားမာလဲ
+
+        let a = new Date();
+        
+        console.log(a);
+        // let currentHour = a.getHours();
+
+        // a.setHours(currentHour+300);
+
+        // console.log(a);
+
+        // နောက်တစ်ခါသွေးလှူရမယ့် date ကို ဖော်ပြပါ
+
+        // a.setDate(d.getDate()+4);
+
+        // console.log(a);
+
+        // 50hr ပါတယ့် swd course ကို တစ်နေ့ 2hr လေ့လာရင် ဘယ်နေ့ပြီးမှာလဲ
+
+        let totallessonhours = 50;
+        let learnperday = 2;
+        let result = totallessonhours/learnperday;
+
+        a.setDate(a.getDate()+ result);
+
+        console.log(a);
+
+    </script>
+
+
+</body>
+</html>

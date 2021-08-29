@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP js</title>
+</head>
+<body>
+    <script>
+        
+        // Oop တေဆိုတာ object template တေကို မွေးထုတ်ပေးတယ့် template တစ်ခုဖြစ်ပါတယ်
+
+        // class name {
+        //     properties တေ declare လုပ်လို့ရပါတယ်
+        //     method တေ declare လုပ်လို့ရပါတယ
+        // }
+
+        class myself{
+            name = "Mg Wine Sat Han";
+            age = 21;
+            gf = "Thet Htar Oo";
+            skills = ["html","css","js"];
+
+            teach(){
+                return "I can teach";
+            }
+
+            bd(){
+                return "I was born in 2000"
+            }
+        }
+
+
+        // မင်းလုပ်ထားတယ့် class  ကို တန်းပီး သုံးလို့မရဘူး မင်း class->obj ပြောင်းဖို့လိုအပ်တယ် အဲ့လို ပြောင်းတာကို instantiate လုပ်တယ်လို့ ခေါ်တယ် 
+        // instantiate လုပ် ရင် new ခေါ်လုပ်ရတယ်
+        // နောက်တစ်နည်းနဲ့လဲ လုပ်လို့ရပါသေးတယ် အဲ့တာကတော့ static ပေးပီး လုပ်လို့ရပါတယ်  static ကို class ရဲ့ property သို့မဟုတ် method ရှေ့မာထားပေးရပါတယ်
+
+        let Myself = new myself;
+
+
+        class student{
+            constructor(name,age,ph){
+                this.name = name;
+                this.age = age;
+                this.ph = ph;
+            }
+
+            learn(){
+                return this.name+" can learn";
+            }
+        }
+        
+        let s1 = new student("winesathan",21,"0934343434");
+        let s2 = new student("aungaung",21,"0934343434");
+        let s3 = new student("mgmg",21,"0934343434");
+        let s4 = new student("susu",21,"0934343434");
+        
+    </script>
+</body>
+</html>
