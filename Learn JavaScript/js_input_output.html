@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and Output</title>
+</head>
+<body>
+
+    <h1 id="header">Min Ga lr pr</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, porro? Quis ex maiores distinctio voluptas a alias esse sint consectetur dolore tempora, temporibus omnis laborum nisi earum recusandae, nam libero!
+    </p>
+    <p>This is paragraph</p>
+
+    <input type="text" name="" id="inputtext">
+    <button onclick="changetext()">Click Me</button>
+    
+
+
+    <script>
+
+
+        // input
+
+        // let x = window.prompt("What's your name?");
+
+        // Output
+
+        // window.alert(x);
+
+        // let x = window.confirm("မင်းငါ့ကို ချစ်ရောချစ်သေးရဲ့လား !");
+
+        // console.log(x);
+
+        // document.write(`<h1>${x ? "ချစ်သေးပါတယ်" : "မချစ်တော့ဘူး"}</h1>`)
+
+        // let inputText = prompt("Say somethings");
+
+        // document.getElementById("header").innerText = inputText;
+
+        // input
+        let i = document.getElementById("inputtext");
+
+        let h = document.getElementById("header");
+
+        function changetext(){
+            // Set
+            let inputText = i.value;
+            // output
+            h.innerText = i.value;
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

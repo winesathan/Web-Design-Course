@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical</title>
+</head>
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.head{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator{
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.resultpart{
+    margin-bottom: 20px;
+}
+
+#result{
+    width: 200px;
+    display: inline-block;
+}
+
+#store{
+    background: #2d88ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#clear{
+    background: #f02849;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#width{
+    border: none;
+    background-color: #3a3b3c;;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#width:focus{
+    outline: none;
+}
+
+#breadth{
+    border: none;
+    background-color: #3a3b3c;;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#breadth:focus{
+    outline: none;
+}
+
+.calbtn{
+    background: #31a24c;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.datastore{
+
+    margin-top: 20px;
+    background-color: #b7b9bd;
+    padding: 10px 20px;
+
+}
+
+
+ul li {
+    margin-top: 10px;
+    list-style-type: none;
+    background-color: aliceblue;
+    margin-bottom: 10px;
+    padding: 5px 15px;
+    border-left: 2px solid black;
+}
+
+ul li:hover{
+    border-left: 4px solid black;
+}
+
+
+</style>
+
+
+
+<body>
+
+    <div class="head">
+        <div class="calculator">
+            <h1>Area calculator</h1>
+            <div class="resultpart">
+                <span>Result :</span>
+                <span id="result"></span>
+                <button id="store" onclick="adddata()">Store</button>
+                <button id="clear" onclick="clearbtn()">Clear</button>
+            </div>
+            <div class="inputpart">
+                <input type="number" id="width" placeholder="Width">
+                <input type="number" id="breadth" placeholder="Breadth">
+                <input type="button" class="calbtn" value="Calculator" onclick="calarea()">
+            </div>
+            <div class="datastore">
+                This is Record
+                <ul id="list">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <script>
+
+        // Practical
+
+        // .area ကို တွက်တယ့် fun တစ်ခုတည်ဆောက်ပါမယ်။ width & breadth ကိုယူပါမယ်
+        //  area ကို တွက်ပါမယ်။ အဖြေကို square feet နဲ့ထုတ်ပေးပါမယ်
+        // .တွက်ချက်မှုတေရဲ့ w,b,result တေကို မှတ်တန်းအနေနဲ့သိမ်းထားပါမယ်
+
+
+        // Get
+
+        let width = document.getElementById("width");
+        let breadth = document.getElementById("breadth");
+        let a = document.getElementById("result");
+        
+        let calarea = function(){
+
+            if(width.value == 0 || breadth.value == 0 ){
+                alert("pill fill width and breath");
+            }else{
+                let result = width.value * breadth.value;
+                a.innerHTML = `${width.value}ft x ${breadth.value}ft = ${result}ft<sup>2</sup>`
+                width.value = "";
+                breadth.value = "";
+            }
+            
+        }
+
+
+        function adddata(){
+
+            if( result.innerHTML == "" ){
+                alert("Result is Empty");
+            }else{
+                document.getElementById("list").innerHTML += `<li>${result.innerHTML}</li>`;
+                clearbtn();
+            }
+            
+        }
+
+        function clearbtn(){
+            result.innerHTML = "";
+        }
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
