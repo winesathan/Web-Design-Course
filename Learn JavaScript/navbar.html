@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+</head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+header{
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px;
+    
+}
+
+header:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.brand a{
+    color: #41c398;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+}
+
+.btn{
+    display: none;
+    
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.nav{
+
+
+}
+
+.nav-list{
+
+    padding: 0;
+
+}
+
+.nav-list li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.nav-item{
+    text-decoration: none;
+    background-color: #41c398;
+    padding: 10px 15px;
+    text-align: center;
+    width: 120px;
+    color: #fffffff2;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+
+@media screen and (max-width : 480px) {
+    header{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        display: block;
+        padding: 20px;
+        background-color: #41c398;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .nav{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-list li{
+        display: block;
+    }
+
+    .nav-item{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-item:first-child{
+        margin-top: 10px;
+    }
+
+}
+
+    .show-nav{
+        display: block;
+        animation: showslow 0.5s;
+        position: absolute;
+        z-index: -1;
+        top: 100px;
+        left: 0;
+    }
+
+    @keyframes showslow{
+        0%{
+            transform: translateY(-100px);
+        }
+
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+</style>
+
+
+
+<body>
+    
+
+    <header>
+        <div class="brand">
+            <a href="#">Universe_X</a>
+        </div>
+        <button class="btn">M</button>
+        <nav class="nav" id="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="#" class="nav-item">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">About</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Service</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Gallery</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+
+    </header>
+
+
+
+</body>
+
+<script>
+
+    let nav = document.getElementById("nav");
+
+    document.querySelector(".btn").addEventListener("click",()=>nav.classList.toggle("show-nav"));
+
+
+</script>
+
+</html>
