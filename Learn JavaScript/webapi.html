@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB API</title>
+</head>
+
+
+<style>
+
+
+</style>
+
+
+
+<body>
+
+    <input type="file" name="file" id="upload" multiple>
+
+    <div class="box">
+        <ul id="list"></ul>
+    </div>
+    
+
+
+
+    <form action="" id="test">
+        <input type="text" name="uname" id="">
+        <br><br>
+        <input type="password" name="pwd" id="">
+        <br><br>
+        <button>Register</button>
+    </form>
+</body>
+
+<script>
+
+    let a = new Audio(`https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3`);
+
+    // a.play();
+    // a.pause()
+
+    let upload = document.getElementById("upload");
+
+    upload.addEventListener("change",function(){
+        let b = this.files  ;
+        for(x of b){
+            document.getElementById("list").innerHTML += `<li>${x.name}</li>`;
+        }
+    }
+    )
+
+
+    document.getElementById("test").addEventListener("submit",function(e){
+        e.preventDefault();
+        let x = new FormData(this);
+
+        for(let pair of x.entries()){
+            console.log(pair[0]+":"+pair[1]);
+        }
+    });
+
+</script>
+
+</html>

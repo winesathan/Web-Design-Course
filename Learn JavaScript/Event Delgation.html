@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    
+
+<p>Event Delegation</p>
+
+
+<button id="showlist" onclick="showlist()">Showlist</button>
+<ul id="list"></ul>
+
+
+
+
+<script>
+    let arr = ["orange","stawberry","apple","mango","banana","lemon"];
+    let list = document.getElementById("list");
+    
+    function showlist(){
+        arr.map(function(el){
+        addlist(el);
+    })
+    }
+    
+    function addlist (x){
+        let li = document.createElement("li");
+        let text = document.createTextNode(x);
+        li.appendChild(text);
+        list.appendChild(li);
+    }
+
+
+    list.addEventListener("click",function(e){
+        let li = e.target;
+        console.log(li.innerHTML);
+    })
+
+    
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
