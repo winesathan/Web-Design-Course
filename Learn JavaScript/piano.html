@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Project</title>
+</head>
+<body>
+
+
+    <input type="text" name="text" id="text">
+    <button onclick="save()">Save Record</button>
+    <br><br>
+    <button onclick="run('C4')">C4</button>
+    <button onclick="run('D4')">D4</button>
+    <button onclick="run('E4')">E4</button>
+    <button onclick="run('F4')">F4</button>
+    <button onclick="run('G4')">G4</button>
+    <button onclick="run('A4')">A4</button>
+    <button onclick="run('B4')">B4</button>
+    <button onclick="run('C5')">C5</button>
+
+    <div>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+</body>
+
+
+
+<script>
+
+let chords = document.getElementById("text");
+
+let list = document.getElementById("list");
+
+let pianomemory = [];
+
+function save(){
+    pianomemory.push(chords.value);
+    chords.value = "";
+    list.innerHTML = '';
+    pianomemory.map(function(el,index){
+        list.innerHTML += `<li>${el}<button onclick="replay(${index})">Replay</button></li>`
+    })
+}
+
+function run(x){
+    const a = new Audio(`sound/${x}.mp3`);
+    a.play();
+    chords.value  += x+",";
+}
+
+
+let m = ["A4","C4","D4","E4"]
+
+function runmemory(arr,delay=1000){
+    let x = delay;
+    arr.map(function(el,index){
+        setTimeout(run,x,el);
+        x += delay;
+    });
+}
+
+
+function replay(x){
+    let b = pianomemory[x].split(",");
+    b.pop();
+    console.log(b);
+    runmemory(b);
+}
+
+
+document.addEventListener("keyup",function(e){
+    console.log(e.keyCode);
+    if(e.keyCode == 65){
+        run("C4");
+    }else if(e.keyCode == 83){
+        run("D4");
+    }else if(e.keyCode == 68){
+        run("E4");
+    }else if(e.keyCode == 70){
+        run("F4");
+    }else if (e.keyCode == 74){
+        run("G4");
+    }else if (e.keyCode == 75){
+        run("A4");
+    }else if(e.keyCode == 76){
+        run("B4");
+    }else if(e.keyCode == 186){
+        run("C5");
+    }else if(e.keyCode == 13){
+        save();
+    }
+});
+
+
+
+
+
+
+</script>
+
+
+</html>
