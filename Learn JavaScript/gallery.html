@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+
+<style>
+
+#uploader {
+    background-color: burlywood;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#uploader img{
+    width: 150px;
+}
+
+#upload{
+    display: none;
+}
+
+#gallery{
+    columns: 3 250px;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+.gallery-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+</style>
+
+
+
+
+<body>
+    
+
+<div id="uploader">
+    <img src="sound/cloud-computing.png" alt="">
+</div>
+
+
+<input type="file" name="" id="upload" accept="image/png" multiple>
+
+<h1 style="text-align: center;margin: 10px 0;">This is Gallery</h1>
+<div id="gallery">
+    
+</div>
+
+
+<script>
+
+    let defaultphoto = "sound/cloud-computing.png";
+    let upload = document.getElementById("upload");
+    let uploader = document.getElementById("uploader");
+    let preview = document.getElementById("preview");
+    let gallery = document.getElementById("gallery");
+
+    function addtogallery(src){
+        let img = new Image();
+        img.src = src;
+        img.classList = "gallery-img";
+        gallery.appendChild(img);
+    }
+
+    uploader.addEventListener("click",function(){
+        upload.click(); 
+    })
+
+    
+    
+    upload.addEventListener("change",function(){
+        
+        let photo = this.files;
+        
+
+        
+        for(let i=0;i<photo.length;i++){
+            const reader = new FileReader();
+            reader.addEventListener("load",function(){
+            addtogallery(reader.result);
+            });
+
+        reader.readAsDataURL(photo[i]);
+        console.log(photo[i]);
+        }
+        
+
+        
+    })
+
+
+</script>
+
+
+
+</body>
+</html>
